@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Django y React</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Puedes agregar estilos personalizados aquí si es necesario */
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-white text-2xl font-bold">Curso de Django y React</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-white">Inicio</a></li>
+          <li><a href="acerca.html" class="text-white">Acerca</a></li>
+          <li><a href="contacto.html" class="text-white">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto my-8">
+    <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="bg-white p-4 shadow-md rounded-lg">
+        <img src="img/statickds.jpg" alt="Tu fotografía" class="w-full h-auto mb-4 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">¿Quién soy?</h3>
+        <p style="text-align: justify;">Soy un candidato a doctorado en Ciencias de la Computación con una sólida
+          formación en informática y una profunda pasión por el desarrollo de software avanzado e investigación.</p>
+        <br>
+        <p style="text-align: justify;">Mi trayectoria abarca tanto la enseñanza de Ciencias de la Computación como la
+          realización de investigaciones en áreas fundamentales como Desarrollo de Software e Inteligencia Artificial.
+        </p>
+      </div>
+      <div id="dynamicCards" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!-- Las tarjetas dinámicas se agregarán aquí -->
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>Derechos de autor © 2024 Curso de Django y React</p>
+    </div>
+  </footer>
+  <script>
+    const dynamicData = [
+      {
+        title: "Información de contacto",
+        content: `
+          <ul>
+            <li><strong>Edad:</strong> 35</li>
+            <li><strong>Nacionalidad:</strong> Ecuatoriano</li>
+            <li><strong>Ciudad/País:</strong> Quito, Ecuador</li>
+            <li><strong>Correo electrónico:</strong> <a href="mailto:dsaavedra88@gmail.com">dsaavedra88@gmail.com</a></li>
+            <li><strong>Correo electrónico Coding Academy:</strong> <a href="mailto:dsaavedra@codingsacademy. com">dsaavedra@codingsacademy.com</a></li>
+            <li><strong>Teléfono:</strong> +593 992018216</li>
+            <li><strong>Freelance:</strong> Disponible</li>
+            <li><strong>Inglés:</strong> B1</li>
+          </ul>
+          <p style="text-align: justify;">Si estás interesado en colaborar en proyectos, no dudes en contactarme. Estoy disponible para trabajar en proyectos de desarrollo de software, consultoría técnica, investigación y más.</p>
+        `
+      },
+      {
+        title: "Educación",
+        content: `
+          <ul>
+            <li><strong>Candidato a Doctorado en Ciencias de la Computación</strong> - 2024 - Actualidad - American University of Europe</li>
+            <li><strong>Magíster en Ciencias de la Computación y Tecnología</strong> - 2021 - Universidad Técnica Particular de Loja</li>
+            <li><strong>Magíster en Ciencias de la Computación</strong> - Investigación en Aprendizaje Profundo y Atención</li>
+            <li><strong>Licenciado en Informática Educativa</strong> - 2011 - Universidad Nacional de Loja</li>
+          </ul>
+        `
+      },
+      {
+        title: "Experiencia Profesional",
+        content: `
+          <ul>
+            <li><strong>Docente de Ciencias de la Computación</strong> - 2013 - 2022 - Escuela de Educación Básica Antonio Peña Celi</li>
+            <li><strong>Profesor</strong> - 2019 - 2022 - Instituto Superior Tecnológico Juan Montalvo</li>
+            <li><strong>Profesor</strong> - 2022 - 2022 - Universidad Internacional del Ecuador</li>
+            <li><strong>Facilitador</strong> - 2021 - Actualidad - Abacom</li>
+            <li><strong>Docente</strong> - 2023 - Actualidad - Universidad de las Fuerzas Armadas ESPE</li>
+            <li><strong>Facilitador</strong> - 2024 - Actualidad - Coding Academy</li>
+          </ul>
+        `
+      },
+      {
+        title: "Habilidades Técnicas",
+        content: `
+          <ul>
+            <li><strong>Sistemas Operativos:</strong> GNU/Linux (Ubuntu, Debian, Fedora, Archlinux, WSL2)</li>
+            <li><strong>Lenguajes y Frameworks:</strong> Python (Django, Flask, Fast API, Reflex), JavaScript (Express, Astro, Next.js)</li>
+            <li><strong>Desarrollo Móvil:</strong> Android, Flutter</li>
+            <li><strong>Bases de Datos:</strong> MySQL, PostgreSQL, SQLite3, MongoDB</li>
+            <li><strong>Herramientas:</strong> Git, GitHub, Docker, Kubernetes, Postman, Thunder Client</li>
+            <li><strong>Redacción Científica:</strong> Quarto, LaTeX, Revealjs</li>
+          </ul>
+        `
+      }
+    ];
+
+    const dynamicCardsContainer = document.getElementById("dynamicCards");
+    dynamicData.forEach(item => {
+      const card = document.createElement("div");
+      card.classList.add("bg-white", "p-4", "shadow-md", "rounded-lg");
+      card.innerHTML = `
+        <h3 class="text-xl font-semibold mb-2">${item.title}</h3>
+        ${item.content}
+      `;
+      dynamicCardsContainer.appendChild(card);
+    });
+  </script>
+</body>
+
+</html>

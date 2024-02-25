@@ -1,0 +1,11 @@
+presentations/Presentacion/.idea/
+presentations/Presentacion/*.iml
+presentations/Presentacion/*.iws
+presentations/Presentacion/*.eml
+presentations/Presentacion/out/
+presentations/Presentacion/.DS_Store
+presentations/Presentacion/.svn
+presentations/Presentacion/log/*.log
+presentations/Presentacion/tmp/**
+presentations/Presentacion/node_modules/
+presentations/Presentacion/.sass-cache
