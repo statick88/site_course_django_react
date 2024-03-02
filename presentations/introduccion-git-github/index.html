@@ -323,11 +323,11 @@ git reset archivo
 				<section>
 					<h4>Comandos Básicos de Git 📝</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-					<p style="text-align: justify;"><strong>git diff:</strong> Muestra las diferencias entre versiones.
+					<p style="text-align: justify;"><strong>git diff:</strong> Muestra las diferencias entre ramas.
 					</p>
 					<pre>
 						<code>
-git diff
+git diff rama1 rama2
 						</code>
 					</pre>
 				</section>
@@ -368,13 +368,12 @@ git diff
 				<section>
 					<h4>Mover Cambios de Local a Staging:</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-					<p style="text-align: justify;">Abre el archivo hello_world.py en tu editor de código.
+					<p style="text-align: justify;">Abre el archivo <strong>hello_world.py</strong> en tu editor de código.
 						Encuentra la línea que dice <strong>print("Bienvenio Mundo")</strong> y cámbiala por
 						<strong>print("Bienvenido Mundo")</strong>.
 					</p>
 					<p style="text-align: justify;">Encuentra la línea que dice <strong>nombre = input("Ingrese su nombre:
-							")</strong> y cámbiala
-						por <strong>nombre = input("Por favor ingrese su nombre: ")."</strong>.</p>
+							")</strong> y cámbiala por <strong>nombre = input("Por favor ingrese su nombre: ")</strong>.</p>
 				</section>
 				<section>
 					<h4>Código</h4>
@@ -430,7 +429,7 @@ git add .
 
 				<section>
 					<h4>Vovler a Local:</h4>
-					<p style="text-align: justify;">Si deseas deshacer los cambios y volver al estado anterior (local), puedes
+					<p style="text-align: justify;">Si deseas deshacer los cambios de (staged) y volver al estado anterior (local), puedes
 						usar el comando:</p>
 					</p>
 					<pre>
