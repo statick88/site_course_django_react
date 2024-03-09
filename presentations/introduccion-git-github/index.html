@@ -184,7 +184,7 @@ def welcome_message():
 		print("Bienvenio,", name, "al curso de Django y React!")
 														
 if __name__ == "__main__":
-welcome_message()
+		welcome_message()
 						</code>
 					</pre>
 					<ul>
@@ -291,10 +291,10 @@ git branch
 				<section>
 					<h4>Comandos Básicos de Git 📝</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-					<p style="text-align: justify;"><strong>git checkout nombre_rama:</strong> Cambia a una rama específica.</p>
+					<p style="text-align: justify;"><strong>git checkout -b nombre_rama:</strong> Cambia a una rama específica.</p>
 					<pre>
 						<code>
-git checkout nombre_rama
+git checkout -b nombre_rama
 						</code>
 					</pre>
 				</section>
@@ -381,13 +381,12 @@ git diff rama1 rama2
 					<p style="text-align: justify;">Actualmente tenemos el siguiente código: </p>
 					<pre>
 						<code>
-		
 def welcome_message():
 		name = input("Ingrese su nombre: ")
 		print("Bienvenio,", name, "al curso de Django y React!")
 		
 if __name__ == "__main__":
-welcome_message()
+		welcome_message()
 					</code>
 				</pre>
 				</section>
@@ -408,7 +407,7 @@ if __name__ == "__main__":
 					<p style="text-align: justify;">Guarda los cambios.</p>
 				</section>
 
-				<section>
+				<section data-state="esconder">
 					<h4>Agregar Cambios de Local a Staging:</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<p style="text-align: justify;">Para agregar los cambios realizados al área de staging, utiliza el comando:
@@ -434,19 +433,19 @@ git add .
 					</p>
 					<pre>
 						<code>
-git checkout -- nombre_archivo
+git restore --source=HEAD :/
 						</code>
 					</pre>
 					<p style="text-align: justify;">para deshacer los cambios en un archivo específico o</p>
 					<pre>
 						<code>
-git checkout -- hello_world.py
+git restore --staged hello_world.py
 						</code>
 					</pre>
 					<p style="text-align: justify;">para deshacer todos los cambios en todos los archivos</p>
 				</section>
 
-				<section>
+				<section data-state="esconder">
 					<h4>Mover los cambios de Statging a Commit</h4>
 					<p style="text-align: justify;">Una vez que estés satisfecho con los cambios y los hayas añadido al área de
 						staging, puedes confirmarlos en un commit
@@ -459,40 +458,14 @@ git commit -m "Mensaje descriptivo
 					</pre>
 					<p style="text-align: justify;">un ejemplo: </p>
 					<pre>
-										<code>
-git commit -m "Corregir mensaje de bienvenida y mejorar mensaje de ingreso"
-
-										</code>
-									</pre>
+						<code>
+git commit -m "Corregir mensaje de bienvenida"
+						</code>
+					</pre>
 					<p style="text-align: justify;">para deshacer todos los cambios en todos los archivos</p>
 				</section>
 			</section>
-			<section>
-				<section>
-					<h4>Estados en Git 📊</h4>
-					<ul>
-						<li style="text-align: justify;"><strong>Local:</strong> Representa los cambios que realizas en tu
-							repositorio local
-							antes de hacer un commit. Estos cambios están únicamente en tu máquina. </li>
-						<li style="text-align: justify;"><strong>Staging:</strong> Indica los cambios que has añadido al área de
-							preparación
-							con el comando git add. Estos cambios están listos para ser confirmados en el próximo commit. </li>
-					</ul>
-				</section>
-				<section>
-					<h4>Estados en Git 📊</h4>
-					<ul>
-						<li style="text-align: justify;"><strong>Commit:</strong> Son los cambios que has confirmado en tu
-							repositorio
-							local con el comando git commit. Estos cambios se han
-							guardado de manera permanente en tu repositorio local. </li>
-						<li style="text-align: justify;"><strong>Server:</strong> Son los cambios que has subido al repositorio
-							remoto
-							con el comando git push. Estos cambios están disponibles
-							para otros colaboradores del proyecto.</li>
-					</ul>
-				</section>
-			</section>
+
 			<section>
 				<section>
 					<h4>Ejemplo Práctico: Corrección de Fusiones en Git 🛠️</h4>
@@ -542,18 +515,10 @@ ciudad = input("¿De dónde eres? ")
 				<section>
 					<h4>Corrección del Error en la Rama Específica: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-					<p style="text-align: justify;">Al parecer, al fusionar las ramas <strong>feature_ciudad</strong> y
-						<strong>feature_atencion</strong>, se sobrescribieron los cambios realizados en la rama
-						<strong>feature_ciudad</strong>, lo cual provocó un error en la presentación del programa.
-					</p>
-				</section>
-				<section>
-					<h4>Corrección del Error en la Rama Específica: 🛠️</h4>
-					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Primero, cambia a la rama donde ocurrió el error utilizando <strong>git
+						<p style="text-align: justify;">Primero, cambia a la rama donde ocurrió el error utilizando <strong>git
 								checkout nombre_rama</strong> para corregir el problema en esa rama.
-						</li>
+						</>
 						<pre>
 							<code>
 git checkout feature_ciudad
@@ -565,15 +530,14 @@ git checkout feature_ciudad
 					<h4>Corrección del Error en la Rama Específica: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Realiza los cambios necesarios en el archivo hello_world.py para corregir
-							el error.</li>
+						<p style="text-align: justify;">Realiza los cambios necesarios en el archivo <strong>hello_world.py</strong> para corregir
+							el error.</>
 						<pre>
 							<code>
 ...
 ciudad = input("¿De dónde eres? ") # Mantener esta línea
 atencion = input("¿Qué fue lo que más te llamó la atención del curso? ") # Agregar esta línea
 ...
-
 							</code>
 						</pre>
 					</ol>
@@ -582,7 +546,7 @@ atencion = input("¿Qué fue lo que más te llamó la atención del curso? ") # 
 					<h4>Corrección del Error en la Rama Específica: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Luego, añade y haz un commit con los cambios corregidos.</li>
+						<p style="text-align: justify;">Luego, añade y haz un commit con los cambios corregidos.</>
 						<pre>
 							<code>
 git add hello_world.py
@@ -595,8 +559,8 @@ git commit -m "Corregir error al fusionar ramas"
 					<h4>Fusión de la Rama Corregida con la Rama Principal: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Una vez que hayas corregido el error en la rama feature_ciudad, cambia a la
-							rama principal (master).</li>
+						<p style="text-align: justify;">Una vez que hayas corregido el error en la rama feature_ciudad, cambia a la
+							rama principal (master).</>
 						<pre>
 							<code>
 git checkout master
@@ -608,19 +572,19 @@ git checkout master
 					<h4>Verificación y Resolución de Conflictos (si es necesario): 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Es posible que al fusionar la rama corregida con la rama principal, se
+						<p style="text-align: justify;">Es posible que al fusionar la rama corregida con la rama principal, se
 							produzcan conflictos si los cambios son
 							incompatibles. En ese caso, Git te indicará los archivos con conflictos y deberás resolverlos manualmente.
-						</li>
+						</>
 					</ol>
 				</section>
 				<section>
 					<h4>Añade los Archivos Modificados, Realiza un Commit y Completa el Proceso de Fusión: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Después de resolver los conflictos, añade los archivos modificados, realiza
+						<p style="text-align: justify;">Después de resolver los conflictos, añade los archivos modificados, realiza
 							un commit y completa el proceso de fusión.
-						</li>
+						</>
 						<pre>
 							<code>
 git status
@@ -633,9 +597,9 @@ git diff hello_world.py
 					<h4>Añade los Archivos Modificados, Realiza un Commit y Completa el Proceso de Fusión: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Después de resolver los conflictos, añade los archivos modificados, realiza
+						<p style="text-align: justify;">Después de resolver los conflictos, añade los archivos modificados, realiza
 							un commit y completa el proceso de fusión.
-						</li>
+						</>
 						<pre>
 							<code>
 git add hello_world.py
@@ -648,11 +612,9 @@ git commit -m "Corregir errores de fusión"
 					<h4>Añade los Archivos Modificados, Realiza un Commit y Completa el Proceso de Fusión: 🛠️</h4>
 					<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li style="text-align: justify;">Siguiendo estos pasos, podrás corregir errores de fusiones en Git y
-							asegurarte de
-							que las ramas se fusionen
-							correctamente sin perder cambios importantes.
-						</li>
+						<p style="text-align: justify;">Siguiendo estos pasos, podrás corregir errores de fusiones en Git y
+							asegurarte de que las ramas se fusionen correctamente sin perder cambios importantes.
+						</>
 					</ol>
 				</section>
 			</section>
