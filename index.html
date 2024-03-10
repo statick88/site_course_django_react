@@ -1,179 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Django y React</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Estilos personalizados */
+      .presentation-container {
+        transition: all 0.3s ease;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso de Django y React</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Estilos personalizados */
-    .presentation-container {
-      transition: all 0.3s ease;
-    }
+      .presentation-container:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+    <!-- Agrega el script de importación de JavaScript -->
+    <script src="script.js" defer></script>
+  </head>
 
-    .presentation-container:hover {
-      transform: translateY(-5px);
-    }
-  </style>
-<!-- Agrega el script de importación de JavaScript -->
-<script src="script.js" defer></script>
-
-</head>
-
-<body class="bg-gray-100">
-  <header class="bg-blue-500 py-4">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-white text-3xl font-bold">¡Bienvenido al Curso de Django y React!</h1>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="#" class="text-white">Inicio</a></li>
-          <li><a href="actividades.html" class="text-white">Actividades</a></li>
-          <li><a href="acerca.html" class="text-white">Acerca</a></li>
-          <li><a href="contacto.html" class="text-white">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container mx-auto my-8">
-    <div class="text-gray-700 mb-8">
-      <h2 class="text-3xl font-bold mb-4 cursor-pointer" onclick="toggleInfo()">Curso de Django y React <span id="arrow"
-          class="ml-2">&#x25B6;</span></h2>
-
-      <div id="info" style="display: none;">
-        <p style="text-align: justify;">El curso de Django y React te ofrece una experiencia educativa única, diseñada
-          para llevar tus habilidades al siguiente nivel. Con un enfoque práctico y clases demostrativas, te sumergirás
-          en el mundo del desarrollo web utilizando tecnologías modernas como Python, Django, React, Html5, Css3,
-          JavaScript y mucho más.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Metodología:</h3>
-        <ul class="list-disc pl-6 mb-6">
-          <li>Clases virtuales interactivas.</li>
-          <li>Prácticas con proyectos reales.</li>
-          <li>Acceso a código de proyectos demostrativos.</li>
-        </ul>
-        <h3 class="text-xl font-bold mt-6 mb-2">Objetivo Principal:</h3>
-        <p style="text-align: justify;">Capacitar a los participantes en el desarrollo web utilizando el framework
-          Django y la biblioteca React, proporcionando las habilidades necesarias para construir aplicaciones web
-          modernas y escalables.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Objetivos Secundarios:</h3>
-        <ul class="list-disc pl-6 mb-6">
-          <li>Comprender los principios de la programación orientada a objetos (POO).</li>
-          <li>Dominar el uso de Git y Github para el control de versiones.</li>
-          <li>Familiarizarse con Docker para la creación y gestión de entornos de desarrollo.</li>
-          <li>Adquirir conocimientos sólidos sobre Django, desde la creación de modelos hasta la implementación de
-            vistas y plantillas.</li>
-          <li>Dominar el desarrollo de API REST con Django Rest Framework.</li>
-          <li>Obtener nociones básicas de Html5, Css3, JavaScript, Node y NPM para aprender React</li>
-          <li>Desarrollar habilidades en la creación de aplicaciones web interactivas utilizando React.</li>
-          <li>Aprender a consumir API de Django Rest Framework con React.</li>
-          <li>Aplicar todos los conocimientos adquiridos en la elaboración de un proyecto final</li>
-        </ul>
-        <h3 class="text-xl font-bold mt-6 mb-2">¿Por qué seguir este curso?</h3>
-        <p style="text-align: justify;">Este curso proporcionará a los participantes las habilidades prácticas
-          necesarias para desarrollar aplicaciones web completas utilizando tecnologías modernas como Django y React.
-          Estas habilidades son altamente demandadas en la industria de desarrollo web y permitirán a los participantes
-          construir proyectos reales y avanzar en sus carreras profesionales.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">¿Qué aprenderé durante este curso?</h3>
-        <ul class="list-disc pl-6 mb-6">
-          <li>Desarrollar aplicaciones web utilizando Django y React.</li>
-          <li>Utilizar eficientemente Git y Github para el control de versiones.</li>
-          <li>Crear y gestionar entornos virtuales con virtualenv.</li>
-          <li>Comprender el uso y eficiencia de Docker en el desarrollo web.</li>
-          <li>Diseñar y trabajar con modelos de bases de datos en Django.</li>
-          <li>Implementar vistas y plantillas en sus proyectos web.</li>
-          <li>Desarrollar API REST con Django Rest Framework.</li>
-          <li>Integrar React.js en proyectos web.</li>
-          <li>Consumir API de Django Rest Framework con React.</li>
-          <li>Elaborar un proyecto final de una tienda virtual, aplicando todos los conceptos aprendidos.</li>
-        </ul>
-        <h3 class="text-xl font-bold mt-6 mb-2">Metodología:</h3>
-        <p>La metodología del curso se basará en el enfoque "aprender haciendo", con un énfasis práctico en la
-          resolución de problemas y la creación de proyectos reales. Se proporcionarán ejercicios prácticos y proyectos
-          que los participantes desarrollarán durante las sesiones.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Modalidad Virtual:</h3>
-        <p style="text-align: justify;">El curso se llevará a cabo de manera virtual a través de plataformas de
-          videoconferencia y un entorno de aprendizaje en línea.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Recursos Hardware y Software:</h3>
-        <p style="text-align: justify;">Hardware: PC o laptop con capacidad suficiente para ejecutar entornos de
-          desarrollo Django y React. Software: Python, Node, NPM, editor de código (por ejemplo, VSCode), Navegador Web,
-          Git, Docker.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Conocimientos Previos:</h3>
-        <p style="text-align: justify;">Conocimientos básicos de programación en Python y comprensión general de Html5 y
-          Css3.</p>
-        <h3 class="text-xl font-bold mt-6 mb-2">Proyecto Final:</h3>
-        <p style="text-align: justify;">Desarrollo de una tienda virtual completa que incluya funcionalidades como
-          registro de usuarios, gestión de productos, carrito de compras y pago en línea. El proyecto se evaluará en
-          función de su funcionalidad, diseño y buenas prácticas de desarrollo.</p>
+  <body class="bg-gray-100">
+    <header class="bg-blue-500 py-4">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <h1 class="text-white text-3xl font-bold">
+          ¡Bienvenido al Curso de Django y React!
+        </h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="text-white">Inicio</a></li>
+            <li>
+              <a href="actividades.html" class="text-white">Actividades</a>
+            </li>
+            <li><a href="acerca.html" class="text-white">Acerca</a></li>
+            <li><a href="contacto.html" class="text-white">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-      <h2 class="text-3xl font-bold mb-4">Presentaciones</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    </header>
 
-        <!-- Presentación General del Curso -->
-        <div class="bg-white p-6 shadow-md rounded-lg text-center">
-          <h3 class="text-2xl font-semibold mb-4">Bienvenida</h3>
-          <img src="img/python-logo.png" alt="Python" class="mx-auto w-20 h-20 mb-4">
-          <p class="text-gray-700 mb-4">En esta presentación tendrá una explicación general de cada uno de los temas que
-            se tratarán en este curso</p>
-          <a href="presentations/bienvenida/index.html"
-            class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
-            presentación</a>
-        </div>
+    <main class="container mx-auto my-8">
+      <div class="text-gray-700 mb-8">
+        <h2
+          class="text-3xl font-bold mb-4 cursor-pointer"
+          onclick="toggleInfo()"
+        >
+          Curso de Django y React <span id="arrow" class="ml-2">&#x25B6;</span>
+        </h2>
 
-        <!-- Presentación Modulo 1: Python Básico -->
-        <div class="bg-white p-6 shadow-md rounded-lg text-center">
-          <h3 class="text-2xl font-semibold mb-4">Python Básico</h3>
-          <img src="img/python-logo.png" alt="Python" class="mx-auto w-20 h-20 mb-4">
-          <p class="text-gray-700 mb-4">En esta presentación, cubriremos los conceptos básicos de Python, incluyendo su
-            sintaxis, variables, tipos de datos y estructuras de control.</p>
-          <a href="presentations\01-introduccion-python\index.html"
-            class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
-            presentación</a>
-        </div>
-
-        <!-- Presentación Modulo 2: Python Intermedio -->
-        <div class="bg-white p-6 shadow-md rounded-lg text-center">
-          <h3 class="text-2xl font-semibold mb-4">Python Intermedio</h3>
-          <img src="img/python-logo.png" alt="Python" class="mx-auto w-20 h-20 mb-4">
-          <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, profundizaremos en el uso de
-            Python, abordando temas como listas, tuplas, diccionarios y conjuntos.</p>
-          <a href="presentations/01-introduccion-python/index.html"
-            class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
-            presentación</a>
-        </div>
-
-        <!-- Presentación Modulo 3: Python Avanzado -->
-        <div class="bg-white p-6 shadow-md rounded-lg text-center">
-          <h3 class="text-2xl font-semibold mb-4">Python Avanzado</h3>
-          <img src="img/python-logo.png" alt="Python" class="mx-auto w-20 h-20 mb-4">
-          <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, exploraremos conceptos
-            avanzados de Python, como la programación orientada a objetos, el manejo de módulos y paquetes, y la
-            creación de aplicaciones avanzadas.
+        <div id="info" style="display: none">
+          <p style="text-align: justify">
+            El curso de Django y React te ofrece una experiencia educativa
+            única, diseñada para llevar tus habilidades al siguiente nivel. Con
+            un enfoque práctico y clases demostrativas, te sumergirás en el
+            mundo del desarrollo web utilizando tecnologías modernas como
+            Python, Django, React, Html5, Css3, JavaScript y mucho más.
           </p>
-          <a href="/presentations/02-poo-python/index.html"
-            class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
-            presentación</a>
-        </div>
-
-        <!-- Presentación Modulo 4: Git y Github / Docker -->
-        <div class="bg-white p-6 shadow-md rounded-lg text-center">
-          <h3 class="text-2xl font-semibold mb-4">Git y Github / Docker</h3>
-          <table class="mx-auto mb-4">
-            <tr>
-              <td><img src="img/github-logo.png" alt="GitHub" class="w-10 h-10"></td>
-              <td><img src="img/docker-logo.png" alt="Docker" class="w-10 h-10"></td>
-            </tr>
-          </table>
-          <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, aprenderemos sobre el control
-            de versiones con Git y Github, así como el uso de contenedores con Docker para el desarrollo de software.
+          <h3 class="text-xl font-bold mt-6 mb-2">Metodología:</h3>
+          <ul class="list-disc pl-6 mb-6">
+            <li>Clases virtuales interactivas.</li>
+            <li>Prácticas con proyectos reales.</li>
+            <li>Acceso a código de proyectos demostrativos.</li>
+          </ul>
+          <h3 class="text-xl font-bold mt-6 mb-2">Objetivo Principal:</h3>
+          <p style="text-align: justify">
+            Capacitar a los participantes en el desarrollo web utilizando el
+            framework Django y la biblioteca React, proporcionando las
+            habilidades necesarias para construir aplicaciones web modernas y
+            escalables.
           </p>
-          <a href="presentations\introduccion-git-github\index.html"
-            class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
-            presentación</a>
+          <h3 class="text-xl font-bold mt-6 mb-2">Objetivos Secundarios:</h3>
+          <ul class="list-disc pl-6 mb-6">
+            <li>
+              Comprender los principios de la programación orientada a objetos
+              (POO).
+            </li>
+            <li>
+              Dominar el uso de Git y Github para el control de versiones.
+            </li>
+            <li>
+              Familiarizarse con Docker para la creación y gestión de entornos
+              de desarrollo.
+            </li>
+            <li>
+              Adquirir conocimientos sólidos sobre Django, desde la creación de
+              modelos hasta la implementación de vistas y plantillas.
+            </li>
+            <li>
+              Dominar el desarrollo de API REST con Django Rest Framework.
+            </li>
+            <li>
+              Obtener nociones básicas de Html5, Css3, JavaScript, Node y NPM
+              para aprender React
+            </li>
+            <li>
+              Desarrollar habilidades en la creación de aplicaciones web
+              interactivas utilizando React.
+            </li>
+            <li>Aprender a consumir API de Django Rest Framework con React.</li>
+            <li>
+              Aplicar todos los conocimientos adquiridos en la elaboración de un
+              proyecto final
+            </li>
+          </ul>
+          <h3 class="text-xl font-bold mt-6 mb-2">
+            ¿Por qué seguir este curso?
+          </h3>
+          <p style="text-align: justify">
+            Este curso proporcionará a los participantes las habilidades
+            prácticas necesarias para desarrollar aplicaciones web completas
+            utilizando tecnologías modernas como Django y React. Estas
+            habilidades son altamente demandadas en la industria de desarrollo
+            web y permitirán a los participantes construir proyectos reales y
+            avanzar en sus carreras profesionales.
+          </p>
+          <h3 class="text-xl font-bold mt-6 mb-2">
+            ¿Qué aprenderé durante este curso?
+          </h3>
+          <ul class="list-disc pl-6 mb-6">
+            <li>Desarrollar aplicaciones web utilizando Django y React.</li>
+            <li>
+              Utilizar eficientemente Git y Github para el control de versiones.
+            </li>
+            <li>Crear y gestionar entornos virtuales con virtualenv.</li>
+            <li>
+              Comprender el uso y eficiencia de Docker en el desarrollo web.
+            </li>
+            <li>Diseñar y trabajar con modelos de bases de datos en Django.</li>
+            <li>Implementar vistas y plantillas en sus proyectos web.</li>
+            <li>Desarrollar API REST con Django Rest Framework.</li>
+            <li>Integrar React.js en proyectos web.</li>
+            <li>Consumir API de Django Rest Framework con React.</li>
+            <li>
+              Elaborar un proyecto final de una tienda virtual, aplicando todos
+              los conceptos aprendidos.
+            </li>
+          </ul>
+          <h3 class="text-xl font-bold mt-6 mb-2">Metodología:</h3>
+          <p>
+            La metodología del curso se basará en el enfoque "aprender
+            haciendo", con un énfasis práctico en la resolución de problemas y
+            la creación de proyectos reales. Se proporcionarán ejercicios
+            prácticos y proyectos que los participantes desarrollarán durante
+            las sesiones.
+          </p>
+          <h3 class="text-xl font-bold mt-6 mb-2">Modalidad Virtual:</h3>
+          <p style="text-align: justify">
+            El curso se llevará a cabo de manera virtual a través de plataformas
+            de videoconferencia y un entorno de aprendizaje en línea.
+          </p>
+          <h3 class="text-xl font-bold mt-6 mb-2">
+            Recursos Hardware y Software:
+          </h3>
+          <p style="text-align: justify">
+            Hardware: PC o laptop con capacidad suficiente para ejecutar
+            entornos de desarrollo Django y React. Software: Python, Node, NPM,
+            editor de código (por ejemplo, VSCode), Navegador Web, Git, Docker.
+          </p>
+          <h3 class="text-xl font-bold mt-6 mb-2">Conocimientos Previos:</h3>
+          <p style="text-align: justify">
+            Conocimientos básicos de programación en Python y comprensión
+            general de Html5 y Css3.
+          </p>
+          <h3 class="text-xl font-bold mt-6 mb-2">Proyecto Final:</h3>
+          <p style="text-align: justify">
+            Desarrollo de una tienda virtual completa que incluya
+            funcionalidades como registro de usuarios, gestión de productos,
+            carrito de compras y pago en línea. El proyecto se evaluará en
+            función de su funcionalidad, diseño y buenas prácticas de
+            desarrollo.
+          </p>
         </div>
+        <h2 class="text-3xl font-bold mb-4">Presentaciones</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Presentación General del Curso -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-4">Bienvenida</h3>
+            <img
+              src="img/python-logo.png"
+              alt="Python"
+              class="mx-auto w-20 h-20 mb-4"
+            />
+            <p class="text-gray-700 mb-4">
+              En esta presentación tendrá una explicación general de cada uno de
+              los temas que se tratarán en este curso
+            </p>
+            <a
+              href="presentations\00-bienvenida\index.html"
+              target="_blank"
+              class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300"
+              >Ver presentación</a
+            >
+          </div>
 
-        <!-- Presentación Modulo 5: Django - Fundamentos -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 1: Python Básico -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-4">Python Básico</h3>
+            <img
+              src="img/python-logo.png"
+              alt="Python"
+              class="mx-auto w-20 h-20 mb-4"
+            />
+            <p class="text-gray-700 mb-4">
+              En esta presentación, cubriremos los conceptos básicos de Python,
+              incluyendo su sintaxis, variables, tipos de datos y estructuras de
+              control.
+            </p>
+            <a
+              href="presentations\01-introduccion-python\index.html"
+              target="_blank"
+              class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300"
+              >Ver presentación</a
+            >
+          </div>
+
+          <!-- Presentación Modulo 2: Python Intermedio -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-4">Python Intermedio</h3>
+            <img
+              src="img/python-logo.png"
+              alt="Python"
+              class="mx-auto w-20 h-20 mb-4"
+            />
+            <p class="text-gray-700 mb-4" style="text-align: justify">
+              En esta presentación, profundizaremos en el uso de Python,
+              abordando temas como listas, tuplas, diccionarios y conjuntos.
+            </p>
+            <a
+              href="presentations\02-poo-python\index.html"
+              target="_blank"
+              class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300"
+              >Ver presentación</a
+            >
+          </div>
+
+          <!-- Presentación Modulo 4: Git y Github-->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-4">Git y Github</h3>
+            <table class="mx-auto mb-4">
+              <tr>
+                <td>
+                  <img
+                    src="img/github-logo.png"
+                    alt="GitHub"
+                    class="w-10 h-10"
+                  />
+                </td>
+              </tr>
+            </table>
+            <p class="text-gray-700 mb-4" style="text-align: justify">
+              En esta presentación, aprenderemos sobre el control de versiones
+              con Git y Github, así como el uso de contenedores con Docker para
+              el desarrollo de software.
+            </p>
+            <a
+              href="presentations\04-introduccion-git-github\index.html"
+              target="_blank"
+              class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300"
+              >Ver presentación</a
+            >
+          </div>
+
+          <!-- Presentación Modulo 4: Docker -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-4">Docker</h3>
+            <table class="mx-auto mb-4">
+              <tr>
+                <td>
+                  <img
+                    src="img/docker-logo.png"
+                    alt="Docker"
+                    class="w-10 h-10"
+                  />
+                </td>
+              </tr>
+            </table>
+            <p class="text-gray-700 mb-4" style="text-align: justify">
+En esta presentación, exploraremos el uso de contenedores con Docker para el desarrollo de software.
+            </p>
+            <a
+              href="presentations\05-docker\index.html"
+              target="_blank"
+              class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300"
+              >Ver presentación</a
+            >
+          </div>
+
+          <!-- Presentación Modulo 5: Django - Fundamentos -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">Django - Fundamentos</h3>
           <img src="img/django-logo.jpg" alt="Django" class="mx-auto w-20 h-20 mb-4">
           <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, nos sumergiremos en los
@@ -184,8 +300,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 6: Django - Desarrollo Intermedio / Desarrollo Avanzado -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 6: Django - Desarrollo Intermedio / Desarrollo Avanzado -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">Django - Intermedio/Avanzado</h3>
           <img src="img/django-logo.jpg" alt="Django" class="mx-auto w-20 h-20 mb-4">
           <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, exploraremos temas más
@@ -196,8 +312,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 7: HTML5, CSS3, JavaScript -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 7: HTML5, CSS3, JavaScript -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">HTML5, CSS3, JavaScript</h3>
           <img src="img/html-css-javascript-logo.png" alt="HTML5, CSS3, JavaScript" class="mx-auto w-20 h-20 mb-4">
           <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, exploraremos los fundamentos
@@ -208,8 +324,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 8: Node.js y NPM -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 8: Node.js y NPM -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">Node.js y NPM</h3>
           <table class="mx-auto mb-4">
             <tr>
@@ -225,8 +341,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 9: React - Fundamentos / Intermedio -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 9: React - Fundamentos / Intermedio -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">React - Fundamentos/Intermedio</h3>
           <img src="img/react-logo.png" alt="React" class="mx-auto w-20 h-20 mb-4">
           <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, exploraremos los fundamentos
@@ -236,8 +352,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 10: React - Desarrollo Avanzado -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 10: React - Desarrollo Avanzado -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">React - Desarrollo Avanzado</h3>
           <img src="img/react-logo.png" alt="React" class="mx-auto w-20 h-20 mb-4">
           <p class="text-gray-700 mb-4" style="text-align: justify;">En esta presentación, nos adentraremos en el
@@ -248,8 +364,8 @@
             presentación</a>
         </div> -->
 
-        <!-- Presentación Modulo 11: Proyecto Final Django -->
-        <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
+          <!-- Presentación Modulo 11: Proyecto Final Django -->
+          <!-- <div class="bg-white p-6 shadow-md rounded-lg text-center">
           <h3 class="text-2xl font-semibold mb-4">Proyecto Final Django</h3>
           <table class="mx-auto mb-4">
             <tr>
@@ -264,16 +380,16 @@
             class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hover:shadow-md transition duration-300">Ver
             presentación</a>
         </div> -->
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto text-center">
-      <p class="text-sm">© 2024 Curso de Django y React. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-</body>
-
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">
+          © 2024 Curso de Django y React. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
