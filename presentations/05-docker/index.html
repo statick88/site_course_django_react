@@ -35,10 +35,10 @@
         </div>
 
         <section data-state="primera" class="primera">
-          <h4>Django 🐍</h4>
+          <h4>Docker 🐋</h4>
           <img
-            src="lib/img/django-logo.jpg"
-            alt="Django"
+            src="lib/img/docker-logo.png"
+            alt="Docker"
             style="max-width: 65%; max-height: 65vh; text-align: center"
           />
         </section>
@@ -46,526 +46,1120 @@
         <section>
           <h4>Objetivo 🎯</h4>
           <p>
-            En esta sección aprenderemos los conceptos básicos de Django y cómo
-            utilizarlo para desarrollar aplicaciones web de forma eficiente y
-            estructurada.
+            En esta sección aprenderemos los conceptos básicos de Docker y cómo
+            usarlo para crear y gestionar contenedores para proyectos de
+            desarrollo.
           </p>
         </section>
 
         <section>
-          <h4>Índice 📚</h4>
-          <ul>
-            <li>Creación de Entornos Virtuales</li>
-            <li>Versiones de Django</li>
-            <li>Comandos Básicos con Django</li>
-            <li>Archivo settings.py</li>
-            <li>Archivos wsgi.py y asgi.py</li>
-            <li>El Modelo MTV vs MVC</li>
-          </ul>
+          <section>
+            <h4>Desarrollo del Tema 📚</h4>
+            <ul>
+              <li>Introducción a Docker</li>
+              <li>Instalación de Docker</li>
+              <li>
+                Conceptos básicos de Docker: contenedores, imágenes, volúmenes
+              </li>
+              <li>Comandos básicos de Docker</li>
+              <li>Creación y gestión de contenedores</li>
+              <li>
+                Uso de Dockerfile para la creación de imágenes personalizadas
+              </li>
+              <li>Redes en Docker</li>
+              <li>Volúmenes en Docker</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Introducción a Docker 🐋</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              En esta sección, introduciremos el concepto de Docker y su
+              importancia en el desarrollo de aplicaciones modernas.
+            </p>
+            <ul>
+              <li>¿Qué es Docker?</li>
+              <li>Beneficios de usar Docker</li>
+              <li>Comparación con la virtualización tradicional</li>
+              <li>Casos de uso de Docker</li>
+            </ul>
+
+            <!-- Notas para el facilitador -->
+            <aside class="notes">
+              <p><strong>Notas para el facilitador:</strong></p>
+              <ul>
+                <li>
+                  Explica el concepto de Docker como una plataforma para
+                  desarrollar, enviar y ejecutar aplicaciones en contenedores.
+                </li>
+                <li>
+                  Destaca los beneficios de Docker, como la portabilidad, la
+                  eficiencia en recursos y la consistencia del entorno de
+                  desarrollo.
+                </li>
+                <li>
+                  Compara Docker con la virtualización tradicional, resaltando
+                  las diferencias clave, como el uso de recursos y el tiempo de
+                  arranque.
+                </li>
+                <li>
+                  Proporciona ejemplos de casos de uso de Docker en el
+                  desarrollo de software, como el despliegue de microservicios y
+                  la gestión de entornos de desarrollo.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h4>Instalación de Docker</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              En esta sección, aprenderemos cómo instalar Docker.
+            </p>
+            <ul>
+              <li>Instalación en Windows</li>
+              <li>Verificación de la instalación</li>
+            </ul>
+          </section>
+</section>
+<section>
+  
+  <section data-state="esconder">
+    <h4>
+      Conceptos básicos de Docker: contenedores, imágenes, volúmenes
+    </h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, exploraremos los conceptos fundamentales de
+      Docker.
+    </p>
+    <ul>
+      <li>Contenedores Docker</li>
+      <li>Imágenes Docker</li>
+      <li>Volúmenes en Docker</li>
+      <li>Comparación entre contenedores e imágenes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Comandos básicos de Docker 1/2</h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, aprenderemos los comandos básicos de Docker para
+      interactuar con contenedores e imágenes.
+    </p>
+    <ul>
+      <li>docker run</li>
+      <li>docker ps</li>
+      <li>docker images</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>docker run 1/2</h4>
+    <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+    <p style="text-align: justify;">
+        El comando <strong>docker run</strong> se utiliza para crear y ejecutar contenedores a partir de imágenes de Docker. Puedes especificar opciones y argumentos adicionales para personalizar el comportamiento del contenedor durante su ejecución.
+    </p>
+    <pre><code>docker run nombre_de_la_imagen [opciones]</code></pre>
+</section>
+
+<section>
+  <h4>docker run 2/2</h4>
+  <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+  <p style="text-align: justify;">
+      Por ejemplo, para crear y ejecutar un contenedor basado en la imagen de Ubuntu, puedes ejecutar: <code>docker run ubuntu</code>.
+  </p>
+</section>
+
+<section>
+  <h4>docker ps 1/2</h4>
+  <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+  <p style="text-align: justify;">
+      El comando <strong>docker ps</strong> se utiliza para mostrar una lista de contenedores en ejecución en el sistema. Proporciona información básica sobre cada contenedor, como su ID, nombre, estado, puertos expuestos, etc.
+  </p>
+  <pre><code>docker ps [opciones]</code></pre>
+</section>
+
+<section>
+  <h4>docker ps 2/2</h4>
+  <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+  <p style="text-align: justify;">
+      Por ejemplo, para mostrar todos los contenedores en ejecución junto con información detallada, puedes ejecutar:
+  </p>
+  <code>docker ps -a</code>
+</section>
+
+<section>
+  <h4>docker images 1/2</h4>
+  <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+  <p style="text-align: justify;">
+      El comando <strong>docker images</strong> se utiliza para mostrar una lista de imágenes disponibles en el sistema. Proporciona información sobre cada imagen, como su repositorio, etiqueta, ID y tamaño.
+  </p>
+  <pre><code>docker images [opciones]</code></pre>
+  <p style="text-align: justify;">
+      Por ejemplo, para mostrar todas las imágenes disponibles en el sistema, puedes ejecutar:
+  </p>
+  <code>docker images</code>
+</section>
+
+  <section>
+    <h4>Comandos básicos de Docker 2/2</h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify;">
+      Otros comandos básicos de Docker incluyen:
+    </p>
+    <ul style="text-align: justify;">
+      <li>docker pull</li>
+      <li>docker stop</li>
+      <li>docker rm</li>
+      <li>docker rmi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>docker pull</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        El comando <strong>docker pull</strong> se utiliza para descargar una imagen de Docker desde un registro de imágenes, como Docker Hub, a tu sistema local.
+    </p>
+    <pre><code>docker pull nombre_de_la_imagen</code></pre>
+    <p style="text-align: justify;">
+        Por ejemplo, para descargar la imagen oficial de <strong>Ubuntu</strong>, puedes ejecutar:
+    </p>
+    <code>docker pull ubuntu</code>
+</section>
+
+<section>
+    <h4>docker stop</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        El comando <strong>docker stop</strong> se utiliza para detener uno o más contenedores en ejecución.
+    </p>
+    <pre><code>docker stop ID_del_contenedor</code></pre>
+    <p style="text-align: justify;">
+        Por ejemplo, para detener un contenedor con ID <strong>abcdef123456</strong>, puedes ejecutar: 
+    </p>
+    <p style="text-align: center;">
+      <code>docker stop abcdef123456</code>
+    </p>
+</section>
+
+<section>
+    <h4>docker rm</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        El comando <strong>docker rm</strong> se utiliza para eliminar uno o más contenedores detenidos.
+    </p>
+    <pre><code>docker rm ID_del_contenedor</code></pre>
+    <p style="text-align: justify;">
+        Por ejemplo, para eliminar un contenedor con ID <strong>abcdef123456</strong>, puedes ejecutar:
+    </p>
+    <p style="text-align: center;">
+      <code>docker rm abcdef123456</code>.
+    </p>
+</section>
+
+<section>
+    <h4>docker rmi</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        El comando <strong>docker rmi</strong> se utiliza para eliminar una o más imágenes de Docker del sistema local.
+    </p>
+    <pre><code>docker rmi nombre_de_la_imagen</code></pre>
+    <p style="text-align: justify;">
+        Por ejemplo, para eliminar la imagen de Ubuntu, puedes ejecutar:
+    </p>
+    <p style="text-align: center;">
+      <code>docker rmi ubuntu</code>.
+    </p>
+</section>
+</section>
+
+<section>
+  <section>
+    <h4>Creación y gestión de contenedores</h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, aprenderemos a crear y gestionar contenedores
+      Docker.
+    </p>
+    <ul>
+      <li>Creación de un contenedor</li>
+      <li>
+        Gestión de ciclos de vida del contenedor (start, stop, restart)
+      </li>
+      <li>Conexión a un contenedor en ejecución</li>
+      <li>Exposición de puertos</li>
+      <li>Asignación de volúmenes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Creación de un contenedor</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        Para crear un contenedor en Docker, puedes utilizar el comando <strong>docker run</strong>, seguido del nombre de la imagen que deseas utilizar.
+    </p>
+    <pre><code>docker run nombre_de_la_imagen</code></pre>
+    <p style="text-align: justify;">
+        Por ejemplo, para crear un contenedor basado en la imagen de Ubuntu, puedes ejecutar:
+      </p>
+      <p style="text-align: center;">
+        <code>docker run ubuntu</code>.
+      </p>
+</section>
+
+<section data-state="esconder">
+  <h4>Gestión de ciclos de vida del contenedor (start, stop, restart) 1/2</h4>
+  <img
+  src="lib/img/docker-logo.png"
+  alt="Docker"
+  style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+  <p style="text-align: justify;">
+      Una vez que has creado un contenedor en Docker, puedes gestionar su ciclo de vida utilizando los comandos <strong>docker start</strong>, <strong>docker stop</strong> y <strong>docker restart</strong>.
+  </p>
+  <pre><code>docker start ID_del_contenedor</code></pre>
+  <pre><code>docker stop ID_del_contenedor</code></pre>
+  <pre><code>docker restart ID_del_contenedor</code></pre>
+</section>
+
+<section>
+<h4>Gestión de ciclos de vida del contenedor (start, stop, restart) 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+    Por ejemplo, para iniciar un contenedor con ID <strong>abcdef123456</strong>, puedes ejecutar:
+</p>
+<p style="text-align: center;">
+  <code>docker start abcdef123456</code>.
+</p>
+</section>
+
+<section data-state="esconder">
+<h4>Conexión a un contenedor en ejecución</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+  Para conectarte a un contenedor en ejecución y ejecutar comandos dentro de él, puedes utilizar el comando <strong>docker exec</strong>.
+</p>
+<pre><code>docker exec -it ID_del_contenedor /bin/bash</code></pre>
+<p style="text-align: justify;">
+  Por ejemplo, para conectarte a un contenedor con ID <strong>abcdef123456</strong>, puedes ejecutar:
+</p>
+<p style="text-align: center;">
+<code>docker exec -it abcdef123456 /bin/bash</code>.
+</p>
+</section>
+
+<section>
+<h4>Exposición de puertos</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Para exponer puertos desde un contenedor Docker al sistema host, puedes utilizar la opción <strong>-p</strong> o <strong>--publish</strong> al ejecutar el comando <strong>docker run</strong>.
+</p>
+<p style="text-align: center;">
+<pre><code>docker run -p puerto_host:puerto_contenedor nombre_de_la_imagen</code></pre>
+</p>
+<p style="text-align: justify;">
+Por ejemplo, para exponer el puerto 80 del contenedor al puerto 8080 del sistema host, puedes ejecutar:
+</p>
+<p>
+<code>docker run -p 8080:80 nginx</code>.
+</p>
+</section>
+
+<section>
+<h4>Asignación de volúmenes 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Para asignar volúmenes a un contenedor Docker y persistir datos entre ejecuciones, puedes utilizar la opción <strong>-v</strong> o <strong>--volume</strong> al ejecutar el comando <strong>docker run</strong>.
+</p>
+<pre><code>docker run -v ruta_host:ruta_contenedor nombre_de_la_imagen</code></pre>
+</section>
+
+<section>
+<h4>Asignación de volúmenes 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Por ejemplo, para asignar el directorio <strong>/var/www</strong> del sistema host al directorio <strong>/usr/share/nginx/html</strong> del contenedor, puedes ejecutar:
+</p>
+<p style="text-align: center;">
+<code>docker run -v /var/www:/usr/share/nginx/html nginx</code>
+</p>
+</section>
+</section>
+<section>
+  <section>
+    <h4>
+      Uso de Dockerfile para la creación de imágenes personalizadas
+    </h4>
+
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, aprenderemos a crear imágenes personalizadas
+      utilizando Dockerfile.
+    </p>
+    <ul>
+      <li>Sintaxis básica de Dockerfile</li>
+      <li>Agregar dependencias</li>
+      <li>Configuración del entorno de trabajo</li>
+      <li>
+        Ejecución de comandos durante la construcción de la imagen
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Sintaxis básica de Dockerfile 1/2</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        Dockerfile es un archivo de texto que contiene instrucciones que Docker utilizará para construir una imagen. La sintaxis básica de un Dockerfile incluye una serie de comandos que describen las acciones necesarias para configurar el entorno y ejecutar la aplicación dentro del contenedor.
+    </p>
+</section>
+
+<section>
+  <h4>Sintaxis básica de Dockerfile 2/2</h4>
+  <img
+  src="lib/img/docker-logo.png"
+  alt="Docker"
+  style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+  <p style="text-align: justify;">
+      Por ejemplo, un Dockerfile simple podría comenzar con una instrucción <strong>FROM</strong> para especificar la imagen base, seguida de otras instrucciones como <strong>RUN</strong>, <strong>COPY</strong>, <strong>EXPOSE</strong> y <strong>CMD</strong> para configurar y ejecutar la aplicación.
+  </p>
+</section>
+
+<section>
+<h4>Agregar dependencias 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+    En un Dockerfile, puedes agregar dependencias necesarias para tu aplicación utilizando la instrucción <strong>RUN</strong>. Por ejemplo, si tu aplicación requiere ciertas bibliotecas o herramientas, puedes instalarlas dentro del contenedor utilizando comandos como <strong>apt-get</strong>, <strong>yum</strong>, <strong>pip</strong>, etc.
+</p>
+</section>
+
+<section>
+<h4>Agregar dependencias 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+  Por ejemplo, para instalar las dependencias de Python en un contenedor basado en Ubuntu, puedes usar:
+</p>
+<p style="text-align: center;">
+<code>RUN apt-get update && apt-get install -y python3</code>
+</p>
+</section>
+
+<section>
+<h4>Configuración del entorno de trabajo</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Puedes configurar el entorno de trabajo dentro del contenedor utilizando la instrucción <strong>WORKDIR</strong>. Esta instrucción establece el directorio de trabajo para las instrucciones siguientes en el Dockerfile.
+</p>
+<p style="text-align: justify;">
+Por ejemplo, para establecer el directorio de trabajo en <strong>/app</strong>, puedes usar:
+</p>
+<p style="text-align: center;">
+<code>WORKDIR /app</code>
+</p>
+</section>
+
+<section>
+<h4>Ejecución de comandos durante la construcción de la imagen 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Puedes ejecutar comandos durante la construcción de la imagen utilizando la instrucción <strong>RUN</strong>. Estos comandos se ejecutarán cuando se construya la imagen, permitiéndote realizar configuraciones adicionales, instalar software, copiar archivos, etc.
+</p>
+</section>
+
+<section>
+<h4>Ejecución de comandos durante la construcción de la imagen 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Por ejemplo, para copiar archivos desde el sistema host al contenedor durante la construcción de la imagen, puedes usar:
+</p>
+
+<p style="text-align: center;">
+<code>COPY archivos /directorio_destino</code>
+</section>
+</section>
+
+<section>
+  <section>
+    <h4>Redes en Docker</h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, exploraremos cómo configurar redes en Docker para
+      conectar contenedores entre sí.
+    </p>
+    <ul>
+      <li>Tipos de redes en Docker</li>
+      <li>Creación de redes personalizadas</li>
+      <li>Conexión de contenedores en una red</li>
+      <li>Comunicación entre contenedores en redes diferentes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Tipos de redes en Docker 1/2</h4>
+    <img
+    src="lib/img/docker-logo.png"
+    alt="Docker"
+    style="max-width: 10%; max-height: 65vh; text-align: center"
+  />
+    <p style="text-align: justify;">
+        Docker admite varios tipos de redes que permiten a los contenedores comunicarse entre sí y con el mundo exterior. Algunos de los tipos de redes comunes en Docker incluyen la red de puente (bridge network), la red de host (host network), la red de superposición (overlay network), y la red de contenedor (container network).
+    </p>
+</section>
+
+<section>
+  <h4>Tipos de redes en Docker 2/2</h4>
+  <img
+  src="lib/img/docker-logo.png"
+  alt="Docker"
+  style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+  <p style="text-align: justify;">
+      Cada tipo de red tiene sus propias características y se utiliza en diferentes situaciones, dependiendo de los requisitos de conectividad de los contenedores.
+  </p>
+</section>
+
+<section>
+<h4>Creación de redes personalizadas 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+    Además de los tipos de redes predeterminados proporcionados por Docker, también puedes crear tus propias redes personalizadas utilizando el comando <strong>docker network create</strong>.
+</p>
+<pre><code>docker network create nombre_de_la_red</code></pre>
+</section>
+
+<section>
+<h4>Creación de redes personalizadas 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+  Esto te permite configurar y gestionar redes específicas para tus aplicaciones y contenedores, y proporciona mayor control sobre la conectividad de la red en tu entorno Docker.
+</p>
+</section>
+
+<section>
+<h4>Conexión de contenedores en una red 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Una vez que has creado una red en Docker, puedes conectar contenedores a esa red utilizando la opción <strong>--network</strong> al ejecutar el comando <strong>docker run</strong>.
+</p>
+<pre><code>docker run --network nombre_de_la_red nombre_de_la_imagen</code></pre>
+</section>
+
+<section>
+<h4>Conexión de contenedores en una red 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Esto permite que los contenedores se comuniquen entre sí a través de la red especificada, lo que facilita la implementación de arquitecturas de microservicios y la gestión de aplicaciones distribuidas.
+</p>
+</section>
+
+<section>
+<h4>Comunicación entre contenedores en redes diferentes 1/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Docker también proporciona la capacidad de comunicarse entre contenedores que se encuentran en redes diferentes utilizando la red de superposición (overlay network) y otras técnicas de enrutamiento.
+</p>
+</section>
+
+<section>
+<h4>Comunicación entre contenedores en redes diferentes 2/2</h4>
+<img
+src="lib/img/docker-logo.png"
+alt="Docker"
+style="max-width: 10%; max-height: 65vh; text-align: center"
+/>
+<p style="text-align: justify;">
+Esto permite construir aplicaciones distribuidas y escalables que pueden funcionar en entornos de múltiples hosts sin comprometer la conectividad de red.
+</p>
+</section>
+</section>
+
+<section>
+  
+  <section data-state="esconder">
+    <h4>Volúmenes en Docker</h4>
+    <img
+      src="lib/img/docker-logo.png"
+      alt="Docker"
+      style="max-width: 10%; max-height: 65vh; text-align: center"
+    />
+    <p style="text-align: justify">
+      En esta sección, aprenderemos a utilizar volúmenes en Docker para
+      persistir datos entre ejecuciones de contenedores.
+    </p>
+    <ul>
+      <li>Creación de volúmenes</li>
+      <li>Asignación de volúmenes a contenedores</li>
+      <li>Copia de datos entre volúmenes y el sistema host</li>
+      <li>Uso de volúmenes anónimos y nombrados</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Creación de volúmenes</h4>
+    <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+    <p style="text-align: justify;">
+        Los volúmenes en Docker se utilizan para persistir datos entre ejecuciones de contenedores. Puedes crear volúmenes utilizando el comando <strong>docker volume create</strong>.
+    </p>
+    <pre><code>docker volume create nombre_del_volumen</code></pre>
+    <p style="text-align: justify;">
+        Esto creará un volumen en Docker que puede ser utilizado por uno o más contenedores para almacenar y compartir datos de forma persistente.
+    </p>
+</section>
+
+<section data-state="esconder">
+  <h4>Asignación de volúmenes a contenedores</h4>
+  <img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+  <p style="text-align: justify;">
+      Una vez que has creado un volumen en Docker, puedes asignarlo a uno o más contenedores utilizando la opción <strong>-v</strong> o <strong>--volume</strong> al ejecutar el comando <strong>docker run</strong>.
+  </p>
+  <pre><code>docker run -v nombre_del_volumen:ruta_en_el_contenedor nombre_de_la_imagen</code></pre>
+  <p style="text-align: justify;">
+      Esto permite que los contenedores accedan al volumen y persistan datos en él durante su ejecución.
+  </p>
+</section>
+
+<section data-state="esconder">
+<h4>Copia de datos entre volúmenes y el sistema host</h4>
+<img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+<p style="text-align: justify;">
+    Puedes copiar datos entre volúmenes y el sistema host utilizando comandos de Docker, como <strong>docker cp</strong>.
+</p>
+<pre><code>docker cp archivo_o_directorio ruta_del_contenedor</code></pre>
+<p style="text-align: justify;">
+    Esto te permite transferir archivos y directorios entre el sistema host y los volúmenes de Docker de manera rápida y sencilla.
+</p>
+</section>
+
+<section data-state="esconder">
+<h4>Uso de volúmenes anónimos y nombrados 1/2</h4>
+<img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+<p style="text-align: justify;">
+  Docker admite tanto volúmenes anónimos como volúmenes nombrados. Los volúmenes anónimos son gestionados por Docker de forma automática y no tienen un nombre asignado. Por otro lado, los volúmenes nombrados son creados explícitamente por el usuario y tienen un nombre asociado.
+</p>
+</section>
+
+<section data-state="esconder">
+<h4>Uso de volúmenes anónimos y nombrados 2/2</h4>
+<img src="lib/img/docker-logo.png" alt="Docker" style="max-width: 10%; max-height: 65vh; text-align: center" />
+<p style="text-align: justify;">
+Ambos tipos de volúmenes pueden ser útiles en diferentes situaciones, dependiendo de los requisitos específicos de tu aplicación y de cómo prefieras gestionar los datos persistentes en Docker.
+</p>
+</section>
+
         </section>
 
         <section>
-
-          <!-- Sección de Creación de Entornos Virtuales -->
           <section>
-            <h4>Creación de Entornos Virtuales</h4>
+            <h4>Ejemplos 🚀</h4>
             <img
-              src="../../img/entorno-virtual.png"
-              alt="Django"
-              style="text-align: center"
-            />
-          </section>
-          <!-- Sección de Creación de Entornos Virtuales -->
-          <section>
-            <h4>Creación de Entornos Virtuales</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              En esta sección, aprenderemos a crear entornos virtuales para
-              nuestros proyectos Django.
+              Veremos algunos ejemplos prácticos para entender mejor los
+              conceptos de Docker:
             </p>
+            <ul>
+              <li>Crear un contenedor simple</li>
+              <li>Montar un volumen</li>
+              <li>Conectar contenedores en una red</li>
+            </ul>
           </section>
 
-          <!-- Sección de Introducción a los entornos virtuales -->
-          <section>
-            <h4>Introducción a los entornos virtuales</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Los entornos virtuales son herramientas que nos permiten aislar
-              las dependencias de nuestros proyectos, garantizando que cada
-              proyecto pueda tener su propio conjunto de dependencias sin
-              interferir con otros proyectos.
-            </p>
-          </section>
-
-          <!-- Sección de ¿Por qué usar entornos virtuales? -->
-          <section>
-            <h4>¿Por qué usar entornos virtuales?</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Es importante utilizar entornos virtuales para evitar conflictos
-              entre las dependencias de diferentes proyectos y mantener un
-              entorno de desarrollo limpio y organizado.
-            </p>
-          </section>
-
-          <!-- Sección de Creación de un entorno virtual con virtualenv -->
-          <section>
-            <h4>Creación de un entorno virtual con virtualenv</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <pre><code>virtualenv myenv</code></pre>
-            <p style="text-align: justify">
-              El comando <code>virtualenv</code> nos permite crear un nuevo
-              entorno virtual con el nombre especificado.
-            </p>
-          </section>
-
-          <!-- Sección de Creación de un entorno virtual con venv -->
-          <section>
-            <h4>Creación de un entorno virtual con venv</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <pre><code>python -m venv env</code></pre>
-            <p style="text-align: justify">
-              El comando <code>venv</code> nos permite crear un nuevo entorno
-              virtual con el nombre especificado de manera nativa.
-            </p>
-          </section>
-
-          <!-- Sección de Activación y desactivación del entorno virtual -->
-          <section>
-            <h4>Activación y desactivación del entorno virtual</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <pre><code>.\env\Scripts\activate</code></pre>
-            <p style="text-align: justify">
-              Para activar el entorno virtual, utilizamos la ruta al directorio
-              del entorno virtual y el archivo <code>activate</code>.
-            </p>
-            <pre><code>deactivate</code></pre>
-            <p style="text-align: justify">
-              Para desactivar el entorno virtual, simplemente ejecutamos el
-              comando <code>deactivate</code>.
-            </p>
-          </section>
-
-          <!-- Sección de Instalación de paquetes en un entorno virtual -->
-          <section>
-            <h4>Instalación de paquetes en un entorno virtual</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <pre><code>pip install package-name</code></pre>
-            <p style="text-align: justify">
-              Utilizamos el comando <code>pip install</code> dentro del entorno
-              virtual para instalar paquetes específicos necesarios para nuestro
-              proyecto.
-            </p>
-          </section>
-
-          <!-- Sección de Consideraciones adicionales para el manejo de entornos virtuales -->
-          <section>
-            <h4>
-              Consideraciones adicionales para el manejo de entornos virtuales
-            </h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Es importante tener en cuenta la gestión de dependencias y la
-              documentación adecuada del entorno virtual para facilitar el
-              trabajo colaborativo y el mantenimiento del proyecto a largo
-              plazo.
-            </p>
-            <p style="text-align: justify">
-              El arcihvo <strong>requirements.tx</strong> tiene mucha
-              importancia en esta sección.
-            </p>
-          </section>
-
-          <!-- Sección de Ejemplos prácticos de uso de entornos virtuales -->
-          <section>
-            <h4>Ejemplos prácticos de uso de entornos virtuales</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              En esta sección, exploraremos ejemplos prácticos de cómo utilizar
-              entornos virtuales en proyectos Django para garantizar un
-              desarrollo limpio y organizado.
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <!-- Sección de Versiones LTS de Django -->
-          <section>
-            <h4>Versiones LTS de Django</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Las versiones LTS (Long-Term Support) de Django reciben soporte a
-              largo plazo, lo que significa que se proporcionan actualizaciones
-              de seguridad y correcciones de errores durante un período
-              prolongado de tiempo.
-            </p>
-          </section>
-
-          <!-- Sección de Calendario de lanzamiento de Django -->
-          <section>
-            <h4>Calendario de lanzamiento de Django</h4>
-            <img
-              src="../../img/django-calendar.png"
-              alt="Django"
-              style="text-align: center"
-            />
-          </section>
-
-          <!-- Sección de Mantenimiento de proyectos en versiones antiguas de Django -->
-          <section>
-            <h4>Mantenimiento de proyectos en versiones antiguas de Django</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              A medida que se lanzan nuevas versiones de Django, es posible que
-              los proyectos existentes necesiten actualizarse para aprovechar
-              las nuevas características y correcciones de errores.
-            </p>
-          </section>
-
-          <!-- Sección de Actualización de proyectos a versiones más recientes de Django -->
-          <section>
-            <h4>
-              Actualización de proyectos a versiones más recientes de Django
-            </h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              La actualización de proyectos a versiones más recientes de Django
-              puede implicar cambios en el código, actualizaciones de
-              bibliotecas y adaptaciones a nuevas prácticas y estándares.
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <!-- Sección de Uso de django-admin para crear proyectos y aplicaciones -->
-          <section>
-            <h4>Uso de django-admin</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Para crear un nuevo proyecto, simplemente ejecuta el comando
-            </p>
-            <pre><code>django-admin startproject nombre_del_proyecto</code></pre>
-            <p style="text-align: justify">
-              De manera similar, para crear una nueva aplicación dentro de un
-              proyecto, puedes usar el comando.
-            </p>
-            <pre><code>python manage.py startapp nombre_de_la_aplicacion</code></pre>
-          </section>
-
-          <!-- Sección de Iniciar un servidor de desarrollo con python manage.py runserver -->
-          <section>
-            <h4>Iniciar un servidor de desarrollo</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              Django proporciona un servidor de desarrollo integrado que puede
-              ser iniciado con el comando
-            </p>
-            <pre><code>python manage.py runserver</code></pre>
-          </section>
-        </section>
-
-        <section>
-          <!-- Sección de Configuración del arcihvo settings.py -->
-          <section>
-            <h4>El arcihvo settings.py</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              El archivo <strong>settings.py</strong> es el archivo de
-              configuración principal de un proyecto de Django.
-            </p>
-          </section>
-
-          <!-- Sección de Configuración de aplicaciones instaladas en settings.py -->
           <section data-state="esconder">
-            <h4>Configuración de aplicaciones instaladas</h4>
+            <h4>Ejemplo 1: Crear un contenedor simple</h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              En esta sección se enumeran todas las aplicaciones instaladas en
-              tu proyecto de Django.
+              En este ejemplo, crearemos un contenedor Docker simple basado en
+              una imagen existente, como Ubuntu, y ejecutaremos un comando
+              dentro de él.
             </p>
+            <pre><code>docker run ubuntu echo "Hola mundo desde Docker"</code></pre>
             <p style="text-align: justify">
-              Cada aplicación puede ser una aplicación de terceros instalada a
-              través de <strong>pip</strong> o una
-              <strong>aplicación personalizada</strong> creada dentro del
-              proyecto.
+              Este comando creará un contenedor basado en la imagen de Ubuntu y
+              ejecutará el comando
+              <strong>echo "Hola mundo desde Docker"</strong> dentro del
+              contenedor. Luego, el contenedor se detendrá automáticamente.
             </p>
           </section>
 
-          <!-- Sección de Configuración de la base de datos en settings.py -->
           <section>
-            <h4>Configuración de la base de datos</h4>
+            <h4>Ejemplo 2: Montar un volumen 1/2</h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              Una de las configuraciones más importantes que se encuentran en
-              este archivo es la configuración de la base de datos.
+              En este ejemplo, montaremos un volumen en un contenedor Docker
+              para persistir datos entre ejecuciones del contenedor.
+            </p>
+            <pre><code>docker run -v /ruta/local:/ruta/contenedor ubuntu</code></pre>
+          </section>
+
+          <section>
+            <h4>Ejemplo 2: Montar un volumen 2/2</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              Este comando crea un contenedor basado en la imagen de Ubuntu y
+              monta el directorio <strong>/ruta/local</strong> del sistema host
+              en el directorio <strong>/ruta/contenedor</strong> del contenedor.
+            </p>
+
+			<p style="text-align: justify;">
+			De esta manera, cualquier dato almacenado en ese directorio dentro contenedor estará disponible en el sistema host y persistiráincluso después de detener el contenedor.
+			</p>
+          </section>
+
+          <section>
+            <h4>Ejemplo 3: Conectar contenedores en una red 1/2</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              En este ejemplo, crearemos una red en Docker y conectaremos dos
+              contenedores para que puedan comunicarse entre sí.
+            </p>
+            <pre><code>docker network create mynetwork</code></pre>
+            <pre><code>docker run --network mynetwork --name container1 ubuntu</code></pre>
+            <pre><code>docker run --network mynetwork --name container2 ubuntu</code></pre>
+          </section>
+
+          <section>
+            <h4>Ejemplo 3: Conectar contenedores en una red 2/2</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              Estos comandos crearán una red llamada
+              <strong>mynetwork</strong> en Docker. Luego, dos contenedores
+              basados en la imagen de Ubuntu se conectarán a esta red utilizando
+              la opción <strong>--network</strong>. 
+            </p>
+			<p style="text-align: justify;">
+				Ahora, los contenedores
+				<strong>container1</strong> y <strong>container2</strong> pueden
+				comunicarse entre sí a través de la red
+				<strong>mynetwork</strong>.
+			</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h4>Ejercicios Prácticos 💻</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              En esta sección, practicaremos lo aprendido con ejercicios para
+              reforzar los conocimientos sobre Docker:
+            </p>
+            <ul>
+              <li>Crear un Dockerfile para una aplicación Python simple</li>
+              <li>Ejecutar y probar la aplicación en un contenedor</li>
+              <li>
+                Crear un contenedor con una base de datos y conectarlo a una
+                aplicación Django
+              </li>
+            </ul>
+          </section>
+
+          <section data-state="esconder">
+            <h4>
+              Ejercicio 1: Crear un Dockerfile para una aplicación Python simple
+              1/2
+            </h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              En este ejercicio, crearemos un Dockerfile para una aplicación
+              Python simple.
             </p>
             <p style="text-align: justify">
-              Aquí puedes especificar qué <strong>tipo</strong> de base de datos
-              utilizará tu aplicación, así como la <strong>conexión</strong> y
-              las <strong>credenciales</strong>
-              necesarias para acceder a ella.
+              El Dockerfile podría tener el siguiente contenido:
+            </p>
+            <pre><code>
+				FROM python:3.9-slim
+				WORKDIR /app
+				COPY . .
+				CMD ["python", "app.py"]
+			</code></pre>
+          </section>
+
+          <section>
+            <h4>
+              Ejercicio 1: Crear un Dockerfile para una aplicación Python simple
+              2/2
+            </h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              Este Dockerfile utiliza una imagen base de Python, establece el
+              directorio de trabajo en <strong>/app</strong>, copia todos los
+              archivos del directorio actual al directorio
+              <strong>/app</strong> del contenedor y finalmente ejecuta el
+              comando <strong>python app.py</strong> para ejecutar la aplicación
+              Python.
             </p>
           </section>
 
-          <!-- Sección de Configuración de archivos estáticos y medios en settings.py -->
-          <section>
-            <h4>Configuración de archivos estáticos y medios</h4>
+          <section data-state="esconder">
+            <h4>
+              Ejercicio 2: Ejecutar y probar la aplicación en un contenedor 1/2
+            </h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              Django proporciona opciones para configurar la gestión de archivos
-              estáticos y de medios en tu aplicación.
+              En este ejercicio, ejecutaremos y probaremos la aplicación Python
+              simple en un contenedor Docker.
             </p>
             <p style="text-align: justify">
-              Los archivos estáticos son archivos <strong>CSS</strong>,
-              <strong>JavaScript</strong>, <strong>imágenes</strong> y
-              <strong>otros recursos</strong> que se sirven directamente desde
-              el servidor web.
+              Para construir la imagen y ejecutar el contenedor, puedes utilizar
+              los siguientes comandos:
+            </p>
+            <pre><code>
+				docker build -t mi_aplicacion_python .
+				docker run mi_aplicacion_python
+			</code></pre>
+          </section>
+
+          <section>
+            <h4>
+              Ejercicio 2: Ejecutar y probar la aplicación en un contenedor 2/2
+            </h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <p style="text-align: justify">
+              Esto construirá la imagen utilizando el Dockerfile creado en el
+              ejercicio anterior y ejecutará un contenedor basado en esa imagen.
+              Luego, puedes probar la aplicación accediendo al contenedor y
+              ejecutando los comandos necesarios.
             </p>
           </section>
 
-          <!-- Sección de Configuración de internacionalización y localización en settings.py -->
-          <section>
-            <h4>Configuración de internacionalización y localización</h4>
+          <section data-state="esconder">
+            <h4>
+              Ejercicio 3: Crear un contenedor con una base de datos y
+              conectarlo a una aplicación Django 1/3
+            </h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              Django incluye soporte integrado para la internacionalización
-              (i18n) y la localización (l10n) de tus aplicaciones.
-            </p>
-            <p style="text-align: justify">
-              En settings.py, puedes configurar el idioma predeterminado de tu
-              aplicación, así como definir qué traducciones están disponibles y
-              dónde se encuentran los archivos de traducción.
+              En este ejercicio, crearemos un contenedor Docker con una base de
+              datos y lo conectaremos a una aplicación Django.
             </p>
           </section>
 
-          <!-- Sección de Configuración de seguridad en settings.py -->
-          <section>
-            <h4>Configuración de seguridad</h4>
+          <section data-state="esconder">
+            <h4>
+              Ejercicio 3: Crear un contenedor con una base de datos y
+              conectarlo a una aplicación Django 2/3
+            </h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              La seguridad es una preocupación importante al desarrollar
-              aplicaciones web.
+              Podríamos utilizar un Dockerfile similar al siguiente para una
+              base de datos PostgreSQL:
             </p>
+            <pre><code>
+				FROM postgres:latest
+				ENV POSTGRES_DB=mydb
+				ENV POSTGRES_USER=myuser
+				ENV POSTGRES_PASSWORD=mypassword
+				EXPOSE 5432
+			</code></pre>
+          </section>
+
+          <section data-state="esconder">
+            <h4>
+              Ejercicio 3: Crear un contenedor con una base de datos y
+              conectarlo a una aplicación Django 3/3
+            </h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
             <p style="text-align: justify">
-              En settings.py, puedes configurar diversas opciones como la clave
-              secreta, que se utiliza para cifrar datos sensibles, así como
-              configuraciones de middleware de seguridad, políticas de cookies,
-              protección contra ataques CSRF y mucho más.
+              Este Dockerfile utiliza la imagen base de PostgreSQL, establece
+              algunas variables de entorno para configurar la base de datos y
+              expone el puerto 5432 para permitir conexiones externas.
             </p>
           </section>
         </section>
 
         <section>
-          <!-- Sección de Archivo wsgi.py -->
-          <section>
-            <h4>Archivo wsgi.py</h4>
+          <section data-state="esconder">
+            <h4>Próximos Pasos ➡️ 1/6</h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              El archivo <strong>wsgi.py</strong> es un punto de entrada para
-              los servidores web compatibles con
-              <strong>WSGI (Web Server Gateway Interface)</strong> para servir
-              tu aplicación de Django.
+              ¡Felicidades por completar este módulo sobre Docker!
             </p>
             <p style="text-align: justify">
-              WSGI es una especificación que define cómo los servidores web
-              pueden comunicarse con aplicaciones web escritas en Python.
+              Ahora que has adquirido conocimientos sólidos sobre Docker, estás
+              listo para llevar tus habilidades al siguiente nivel y aplicarlas
+              en tus proyectos de desarrollo de Django y React.
+            </p>
+            <p style="text-align: justify">
+              Aquí tienes algunos pasos que puedes seguir para continuar tu
+              aprendizaje y aprovechar al máximo Docker en tus proyectos:
+            </p>
+            <p style="text-align: justify">
+              Con dedicación y práctica continua, te convertirás en un experto
+              en el uso de Docker para el desarrollo de software y podrás
+              aprovechar al máximo esta poderosa herramienta en tus proyectos
+              futuros. ¡Adelante y sigue construyendo!
             </p>
           </section>
 
-          <!-- Sección de Archivo asgi.py -->
-          <section>
-            <h4>Archivo asgi.py</h4>
+          <section data-state="esconder">
+            <h4>Próximos Pasos ➡️ 2/6</h4>
             <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <ul style="text-align: justify">
+              <li>
+                Practica más con Docker: Experimenta con diferentes comandos,
+                crea y gestiona contenedores, y profundiza en el uso de
+                Dockerfile para crear imágenes personalizadas.
+              </li>
+              <li>
+                Explora la integración de Docker con Django y React: Aprende
+                cómo utilizar Docker para desarrollar, probar y desplegar
+                aplicaciones web basadas en Django y React de manera eficiente y
+                reproducible.
+              </li>
+          </section>
+
+          <section>
+            <h4>Próximos Pasos ➡️ 3/6</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <ul style="text-align: justify">
+              <li>
+                Participa en proyectos de código abierto: Únete a proyectos de
+                código abierto que utilicen Docker en su desarrollo. Esto te
+                brindará la oportunidad de colaborar con otros desarrolladores y
+                ganar experiencia práctica en el uso de Docker en entornos
+                reales.
+              </li>
+          </section>
+		  
+          <section>
+            <h4>Próximos Pasos ➡️ 4/6</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <ul style="text-align: justify">
+              <li>
+                Continúa tu formación: Considera realizar cursos avanzados sobre
+                Docker, asistir a conferencias o participar en comunidades en
+                línea para mantenerte actualizado sobre las últimas tendencias y
+                prácticas en el mundo de la contenerización.
+              </li>
+          </section>
+
+		  <section>
+            <h4>Próximos Pasos ➡️ 5/6</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
+            />
+            <ul style="text-align: justify">
+              <li>
+                Aplica lo aprendido en proyectos personales: Crea tus propios
+                proyectos utilizando Docker para desarrollar aplicaciones web,
+                servicios backend, o cualquier otro tipo de aplicación que te
+                interese. Esto te ayudará a consolidar tus conocimientos y
+                mejorar tus habilidades prácticas.
+              </li>
+            </ol>
+          </section>
+
+		  <section>
+            <h4>Próximos Pasos ➡️ 6/6</h4>
+            <img
+              src="lib/img/docker-logo.png"
+              alt="Docker"
+              style="max-width: 10%; max-height: 65vh; text-align: center"
             />
             <p style="text-align: justify">
-              El archivo <strong>asgi.py</strong> es similar al archivo
-              <strong>wsgi.py</strong>, pero está diseñado para servidores web
-              compatibles con
-              <strong>ASGI (Asynchronous Server Gateway Interface)</strong>.
+              Con dedicación y práctica continua, te convertirás en un experto
+              en el uso de Docker para el desarrollo de software y podrás
+              aprovechar al máximo esta poderosa herramienta en tus proyectos futuros.
             </p>
-            <p style="text-align: justify">
-              <strong>ASGI</strong> es una especificación que permite la comunicación asincrónica
-              entre servidores web y aplicaciones web en Python.
-            </p>
-          </section>
-        </section>
 
-        <section>
-
-          <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-            src="../../img/mvc.png"
-            alt="MTV",
-            style="text-align: center"
-          />
-          </section>
-
-          <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-            src="../../img/mtv.png"
-            alt="MTV"
-            style="text-align: center"
-          />
-          </section>
-          <!-- Sección de Diferencia entre MTV y MVC -->
-            <section>
-              <h4>Diferencia entre MTV y MVC</h4>
-              <img
-                src="lib/img/django-logo.jpg"
-                alt="Django"
-                style="max-width: 15%; max-height: 15vh; text-align: center"
-              />
-              <p style="text-align: justify">
-                Aunque Django utiliza el patrón MTV (Modelo, Template, Vista) y MVC (Modelo-Vista-Controlador) es un patrón arquitectónico similar, existen algunas diferencias clave entre ambos:
-              </p>
-            </section>
-
-          <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              <ul>
-                <li><strong>Modelo:</strong> En MVC, el modelo representa la capa de datos y la lógica de negocio. En MTV, el modelo sigue siendo la capa de datos y la lógica de negocio, pero se integra más estrechamente con el ORM de Django.</li>
-              </ul>
-            </p>
-          </section>
-
-                          <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              <ul>
-                <li><strong>Vista:</strong> En MVC, la vista es responsable de presentar los datos al usuario y manejar la interacción del usuario. En MTV, la vista se encarga de recuperar los datos del modelo y pasarlos a la plantilla para su renderizado.</li>
-              </ul>
-            </p>
-          </section>
-
-                    <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              <ul>
-                <li><strong>Controlador:</strong> En MVC, el controlador es responsable de manejar las solicitudes del usuario y actualizar el modelo en consecuencia. En MTV, el controlador es más abstracto y se maneja en gran medida por el framework, con el enrutador de URL y las vistas como componentes clave.</li>
-              </ul>
-            </p>
-          </section>
-                    <!-- Sección de Diferencia entre MTV y MVC -->
-          <section>
-            <h4>Diferencia entre MTV y MVC</h4>
-            <img
-              src="lib/img/django-logo.jpg"
-              alt="Django"
-              style="max-width: 15%; max-height: 15vh; text-align: center"
-            />
-            <p style="text-align: justify">
-              En resumen, aunque ambos patrones comparten algunos conceptos, el patrón MTV de Django proporciona una estructura más modular y flexible para el desarrollo de aplicaciones web.
-            </p>
+			<p style="text-align: center;">
+				¡Adelante y sigue construyendo!
+			</p>
           </section>
 
         </section>
