@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Curso de Desarrollo Web con Django y React</title>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/blood.css" />
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <div id="codingacademy">
+          <a href="https://codingsacademy.com/">
+            <img
+              style="
+                border: none;
+                box-shadow: none;
+                width: 150px;
+                position: fixed;
+                bottom: 0;
+                right: 10px;
+              "
+              src="lib/img/codingacademy-logo.png"
+              alt="Coding Academy"
+            />
+          </a>
+        </div>
+
+        <!-- Sección 1: Html5 -->
+        <section data-state="primera" class="primera">
+          <h4>Css</h4>
+          <img
+            src="lib/img/css.png"
+            alt="Css"
+            style="max-width: 65%; max-height: 65vh; text-align: center"
+          />
+        </section>
+
+        <!-- Slide 2: Primeros pasos -->
+        <section data-state="esconder">
+          <h4>Primeros pasos</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            CSS se puede aplicar a un documento HTML de diferentes formas. Una
+            forma común es vincular un archivo CSS externo utilizando la
+            etiqueta link en el encabezado del documento HTML.
+          </p>
+          <pre><code class="language-html">
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+        </code></pre>
+          <p>
+            En este ejemplo, el archivo <strong>styles.css</strong> contiene las
+            reglas de estilo CSS que se aplicarán al documento HTML.
+          </p>
+        </section>
+        <!-- Slide 3: Sintaxis de CSS -->
+        <section data-state="esconder">
+          <h4>Sintaxis de CSS</h2>
+            <img
+            src="lib/img/css.png"
+            alt="Css"
+            style="max-width: 10%; max-height: 65vh; text-align: center"
+          />
+          <p>
+            Las reglas de estilo en CSS se componen de un selector y un bloque
+            de declaración.
+          </p>
+          <pre>
+            <code class="language-css">
+                h1 {
+                    color: red;
+                    font-size: 24px;
+                }
+                p {
+                    color: blue;
+                    font-size: 16px;
+                }
+              </code>
+            </pre>
+        </section>
+
+        <!-- Slide 4: Selectores -->
+        <section data-state="esconder">
+          <h2>Selectores</h2>
+          <p>
+            Los selectores son parte integral de CSS y nos permiten apuntar a
+            elementos específicos en un documento HTML para aplicar estilos.
+          </p>
+          <pre>
+            <code class="language-css">
+          /* Selector de tipo */
+          h1 {
+              color: red;
+          }
+
+          /* Selector de clase */
+          .mi-clase {
+              color: blue;
+          }
+
+          /* Selector de id */
+          #mi-id {
+              color: green;
+          }
+
+          /* Selector de atributo */
+          a[href="https://www.google.com"] {
+              color: purple;
+          }
+
+          /* Selector de pseudo-clase */
+          a:hover {
+              text-decoration: underline;
+          }
+        </code>
+      </pre>
+        </section>
+
+        <!-- Slide 5: Comentarios -->
+        <section>
+          <h4>Comentarios</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Los comentarios en <strong>CSS</strong> nos permiten documentar nuestro código y hacerlo más legible para otros desarrolladores.
+          </p>
+        </section>
+
+        <!-- Slide 6: Colores, valores y convenciones -->
+        <section>
+          <h4>Colores, valores y convenciones</h4>
+            <img
+            src="lib/img/css.png"
+            alt="Css"
+            style="max-width: 10%; max-height: 65vh; text-align: center"
+          />
+          <p>
+            Exploraremos cómo especificar colores en CSS utilizando diferentes
+            métodos, como nombres de colores, valores hexadecimales, RGB y RGBA.
+          </p>
+        </section>
+
+        <!-- Slide 7: Border -->
+        <section>
+          <h4>Border</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            La propiedad border en CSS nos permite agregar bordes alrededor de
+            elementos HTML.
+          </p>
+          <pre><code class="language-css">
+          .mi-elemento {
+              border: 1px solid black;
+          }
+        </code></pre>
+        </section>
+
+        <!-- Slide 8: Border en profundidad -->
+        <section>
+          <h4>Border en profundidad</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Profundizaremos en la propiedad border y exploraremos sus diferentes
+            aspectos.
+          </p>
+          <pre><code class="language-css">
+          .mi-elemento {
+              border-radius: 10px;
+              border-image: url('border.png') 30 round;
+              border-top-width: 2px;
+              border-bottom-width: 4px;
+          }
+        </code></pre>
+        </section>
+
+        <!-- Slide 9: Unidades de medida -->
+        <section data-state="esconder">
+          <h4>Unidades de medida</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            En CSS, existen diferentes unidades de medida que podemos utilizar
+            para especificar tamaños y distancias.
+          </p>
+          <pre><code class="language-css">
+          /* Ejemplo de unidades de medida en CSS */
+          .mi-elemento {
+              width: 200px;
+              height: 100px;
+              font-size: 16px;
+              margin: 10px;
+              padding: 20px;
+          }
+        </code></pre>
+        </section>
+
+        <!-- Slide 10: Background -->
+        <section>
+          <h4>Background</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            La propiedad background en <strong>CSS</strong> nos permite controlar el fondo de un
+            elemento HTML.
+          </p>
+          <pre>
+            <code class="language-css">
+          .mi-elemento {
+              background-color: lightblue;
+              background-image: url('background.png');
+              background-size: cover;
+              background-repeat: no-repeat;
+          }
+        </code>
+      </pre>
+        </section>
+
+        <!-- Slide 11: Overflow -->
+        <section data-state="esconder">
+          <h4>Overflow</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            El modelo de caja en CSS es fundamental para comprender cómo se
+            dimensionan y colocan los elementos en una página web.
+          </p>
+          <pre>
+            <code class="language-css">
+          .mi-elemento {
+              margin: 10px;
+              padding: 20px;
+              overflow: hidden;
+          }
+        </code>
+      </pre>
+        </section>
+
+        <!-- Slide 12: Outline, text-align, text-decoration, text-shadow -->
+        <section data-state="esconder">
+          <h4>Outline, text-align, text-decoration, text-shadow</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Exploraremos diferentes propiedades CSS que afectan al texto en un
+            documento HTML.
+          </p>
+          <pre><code class="language-css">
+          .mi-elemento {
+              outline: 2px solid red;
+              text-align: center;
+              text-decoration: underline;
+              text-shadow: 2px 2px 2px black;
+          }
+        </code></pre>
+        </section>
+
+        <!-- Slide 13: Fuentes custom -->
+        <section data-state="esconder">
+          <h2>Fuentes custom</h2>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Aprenderemos cómo utilizar fuentes personalizadas en una página web
+            mediante el uso de la regla @font-face en CSS.
+          </p>
+          <pre><code class="language-css">
+          @font-face {
+              font-family: 'MiFuente';
+              src: url('mifuente.ttf');
+          }
+
+          .mi-elemento {
+              font-family: 'MiFuente', sans-serif;
+          }
+        </code></pre>
+        </section>
+        <!-- Slide 14: Links y sus estados -->
+        <section data-state="esconder">
+          <h4>Links y sus estados</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Los enlaces a son elementos importantes enuna página web, y CSS nos
+            permite controlar su apariencia y comportamiento en diferentes
+            estados.
+          </p>
+          <pre>
+            <code class="language-css">
+  a:link {
+  color: blue;
+  }
+  
+  php
+  
+        a:visited {
+            color: purple;
+        }
+  
+        a:hover {
+            text-decoration: underline;
+        }
+  
+        a:active {
+            color: red;
+        }
+      </code>
+    </pre>
+        </section>
+        <!-- Slide 15: Listas -->
+        <section>
+          <h4>Listas</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>Discutiremos cómo aplicar estilos a listas HTML utilizando CSS.</p>
+          <pre><code class="language-css">
+    .mi-lista {
+        list-style-type: square;
+        list-style-position: inside;
+    }
+  </code>
+</pre>
+        </section>
+
+        <!-- Slide 16: Tablas -->
+        <section data-state="esconder">
+          <h4>Tablas</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>Exploraremos cómo aplicar estilos a tablas HTML utilizando CSS.</p>
+          <pre><code class="language-css">
+    .mi-tabla {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    .mi-tabla th, .mi-tabla td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+  </code>
+</pre>
+        </section>
+
+        <!-- Slide 17: Display, max-width y position -->
+        <section>
+          <h4>Display, max-width y position</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Aprenderemos sobre las propiedades CSS display, max-width y
+            position.
+          </p>
+          <pre><code class="language-css">
+    .mi-elemento {
+        display: inline-block;
+        max-width: 500px;
+        position: relative;
+    }
+  </code></pre>
+        </section>
+
+        <!-- Slide 18: Float -->
+        <section data-state="esconder">
+          <h4>Float</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            La propiedad float en CSS nos permite colocar elementos HTML a la
+            izquierda o a la derecha dentro de su contenedor.
+          </p>
+          <pre><code class="language-css">
+    .mi-elemento {
+        float: left;
+        width: 50%;
+    }
+
+    .otro-elemento {
+        float: right;
+        width: 50%;
+    }
+  </code></pre>
+        </section>
+
+        <!-- Slide 19: Inline-block -->
+        <section data-state="esconder">
+          <h4>Inline-block</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            La propiedad display: inline-block en CSS nos permite colocar
+            elementos en línea como elementos en bloque.
+          </p>
+          <pre><code class="language-css">
+    .mi-elemento {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .otro-elemento {
+        display: inline-block;
+        width: 50%;
+    }
+  </code></pre>
+        </section>
+
+        <!-- Slide 20: Centrar un elemento -->
+        <section data-state="esconder">
+          <h4>Centrar un elemento</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+          <p>
+            Discutiremos diferentes técnicas para centrar elementos
+            horizontalmente y verticalmente en una página web utilizando CSS.
+          </p>
+        </section>
+
+        <!-- Slide 21: Proyecto -->
+        <section>
+          <h4>Proyecto<h2>
+            <img
+            src="lib/img/css.png"
+            alt="Css"
+            style="max-width: 10%; max-height: 65vh; text-align: center"
+          />
+        </section>
+
+        <!-- Slide 22: Resumen -->
+        <section>
+          <h4>Resumen</h4>
+          <img
+          src="lib/img/css.png"
+          alt="Css"
+          style="max-width: 10%; max-height: 65vh; text-align: center"
+        />
+        <div style="text-align: justify;">
+          <p>
+            cómo aplicar estilos a un documento HTML.
+          </p>
+          <p>
+            Hemos aprendido sobre selectores, propiedades, unidades de medida,
+            fuentes personalizadas, enlaces, listas, tablas y más.
+          </p>
+          <p>
+            También hemos discutido cómo dar estilo a un blog HTML utilizando
+            CSS.
+          </p>
+        </div>
+        </section>
+
+        <!-- Slide 23: Agradecimientos -->
+        <section data-state="ultima" class="ultima">
+          <h3>¡Gracias!</h3>
+          <img src="lib/img/statickds.jpg" alt="Diego Savedra" width="300" />
+          <p><strong>Facilitador:</strong> Diego Saavedra</p>
+          <p><strong>Correo:</strong> dsaavedra@codingsacademy.com</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Más información sobre la inicialización y configuración en:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
