@@ -24,33 +24,18 @@
 
 			<section data-state="primera" class="primera">
 				<h4>Git y Github 🕹️</h4>
-				<table>
-					<tr>
-						<td>
-							<img src="lib/img/git-logo.png" alt="Git" style="max-width: 65%; max-height: 65vh; text-align: center;" />
-						</td>
-						<td>
+							<img src="lib/img/git-logo.png" alt="Git" 
+							style="max-width: 20%; max-height: 65vh; text-align: auto;" />
 							<img src="lib/img/github-logo.png" alt="Git"
-								style="max-width: 65%; max-height: 65vh; text-align: center;" />
-						</td>
-					</tr>
-				</table>
+							style="max-width: 20%; max-height: 65vh; text-align: auto;" />
 			</section>
 			<section>
 			<section>
 
 				<h4>¿Qué es Git y Github? 🕹️</h4>
-				<table style="align-items: center;">
-					<tr>
-						<td>
-							<img src="lib/img/git-logo.png" alt="Git" style="max-width: 65%; max-height: 65vh; text-align: center;" />
-						</td>
-						<td>
+							<img src="lib/img/git-logo.png" alt="Git" style="max-width: 20%; max-height: 65vh; text-align: center;" />
 							<img src="lib/img/github-logo.png" alt="Git"
-								Fstyle="max-width: 65%; max-height: 65vh; text-align: center;" />
-						</td>
-					</tr>
-				</table>
+							style="max-width: 20%; max-height: 65vh; text-align: center;" />
 				<p style="text-align: justify;">Son herramientas ampliamente utilizadas en el desarrollo de software para el control de versiones y la colaboración en proyectos.</p>
 			</section>
 				<section>
@@ -122,14 +107,15 @@
 					<h4>Descarga e Instalación de Git 📥</h4>
 					<img src="lib/img/github-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 					<ol>
-						<li>Visita el sitio web oficial de Git en https://git-scm.com/downloads.</li>
+						<li>Visita el sitio web oficial de Git en <a target=_blank _blank href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</li>
 						<li>Descarga el instalador adecuado para tu sistema operativo y sigue las instrucciones de instalación.</li>
 					</ol>
 				</section>
-				<section>
+				<section data-state="esconder">
 					<h4>Configuración 🛠️</h4>
 					<img src="lib/img/github-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-					<p style="text-align: justify;">Una vez instalado Git, es necesario configurar tu nombre de usuario y dirección de correo electrónico. Esto se puede hacer mediante los siguientes comandos:</p>
+					<p style="text-align: justify;">Una vez instalado Git, es necesario configurar tu nombre de usuario y dirección de correo electrónico.</p>
+					<p style="text-align: justify;">Esto se puede hacer mediante los siguientes comandos:</p>
 					<pre>
 						<code>
 git config --global user.name "Tu Nombre"
@@ -139,24 +125,23 @@ git config --global user.email "tu@email.com"
 				</section>
 				<section>
 				<h4>Instalación de Visual Studio Code 📥</h4>
-				<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
-				<p style="text-align: justify;">Si aún no tienes Visual Studio Code instalado, puedes descargarlo desde https://code.visualstudio.com/download.</p>
+				<img src="lib/img/visual-studio-code-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
+				<p style="text-align: justify;">Si aún no tienes Visual Studio Code instalado, puedes descargarlo desde <a target=_blank _blank href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>.</p>
 			</section>
 			<section data-state="esconder">
 				<h4>Creación de un Repositorio "helloWorld" en Python 🐍</h4>
-				<img src="lib/img/git-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
+				<img src="lib/img/github-logo.png" alt="Github" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 				<ol>
 					<li>Crea una nueva carpeta para tu proyecto y ábrela en Visual Studio Code.</li>
 					<li>Crea un archivo Python llamado <strong>hello_world.py</strong> y escribe el siguiente código:</li>
 				</ol>
 				<pre>
 					<code>
-def welcome_message():
-	name = input("Ingrese su nombre: ")
-	print("Bienvenido,", name, "al curso de Django y React!")
+def hello_world():
+	print("Hello, World!")
 
-__name__ == "__main__":
-	welcome_message()
+if __name__ == "__main__":
+	hello_world()
 					</code>
 				</pre>
 			</section>
@@ -164,22 +149,22 @@ __name__ == "__main__":
 				<h4>Comandos Básicos de Git 📝</h4>
 				<img src="lib/img/github-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 				<ul>
-					<li>git init: Inicializa un nuevo repositorio Git.</li>
-					<li>git add <archivo>: Añade un archivo al área de preparación.</li>
-					<li>git commit -m "<mensaje>": Realiza un commit de los cambios con un mensaje descriptivo.</li>
-					<li>git push: Sube los cambios al repositorio remoto.</li>
-					<li>git pull: Descarga cambios del repositorio remoto.</li>
+					<li><strong>git init:</strong> Inicializa un nuevo repositorio Git.</li>
+					<li><strong>git add <archivo></archivo></strong>: Añade un archivo al área de preparación.</li>
+					<li><strong>git commit -m "<mensaje>"</strong>: Realiza un commit de los cambios con un mensaje descriptivo.</li>
+					<li><strong>git push:</strong> Sube los cambios al repositorio remoto.</li>
+					<li><strong>git pull:</strong> Descarga cambios del repositorio remoto.</li>
 				</ul>
 			</section>
 			<section>
 				<h4>Comandos Básicos de Git 📝</h4>
 				<img src="lib/img/github-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 				<ul>
-					<li>git branch: Lista las ramas disponibles.</li>
-					<li>git checkout <nombre_rama>: Cambia a una rama específica.</li>
-					<li>git merge <nombre_rama>: Fusiona una rama con la rama actual.</li>
-					<li>git reset <archivo>: Descarta los cambios en un archivo.</li>
-					<li>git diff: Muestra las diferencias entre versiones.</li>
+					<li><strong>git branch:</strong> Lista las ramas disponibles.</li>
+					<li><strong>git checkout <nombre_rama></nombre_rama></strong>: Cambia a una rama específica.</li>
+					<li><strong>git merge <nombre_rama></nombre_rama></strong>: Fusiona una rama con la rama actual.</li>
+					<li><strong>git reset <archivo></archivo></strong>: Descarta los cambios en un archivo.</li>
+					<li><strong>git diff</strong>: Muestra las diferencias entre versiones.</li>
 				</ul>
 			</section>
 			<section>
@@ -201,6 +186,7 @@ __name__ == "__main__":
 			</section>
 			<section>
 				<h4>Conclusiones</h4>
+				<img src="lib/img/github-logo.png" alt="Git" style="max-width: 10%; max-height: 65vh; text-align: center;" />
 				<p style="text-align: justify;">En esta clase hemos aprendido los conceptos básicos de Git y GitHub, así como su uso en proyectos de software. Ahora tienes las herramientas necesarias para colaborar de forma efectiva en proyectos de desarrollo y gestionar el control de versiones de tu código.</p>
 			</section>
 			<section>
